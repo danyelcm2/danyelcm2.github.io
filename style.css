@@ -150,4 +150,53 @@ header p {
       font-size: 0.9em;
     }
   }
+
+  /* Estilos para el formulario de contacto */
+form#contactForm {
+  margin-top: 30px;
+}
+
+form#contactForm .form-group {
+  margin-bottom: 15px;
+}
+
+form#contactForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form#contactForm input,
+form#contactForm textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form#contactForm textarea {
+  resize: vertical;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Efecto hover para el botón del formulario */
+button.contact-button:hover {
+  background: #0056b3;
+}
+
+/* Estilo para el mensaje de envío */
+.sent-message {
+  margin-top: 15px;
+  color: #00e676;
+  font-weight: bold;
+  display: none;
+}
+
   

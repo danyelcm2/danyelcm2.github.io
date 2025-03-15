@@ -40,3 +40,59 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', showOnScroll);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let valid = true;
+            
+            // Limpiar mensajes de error previos
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+            
+            // Validar campo Nombre
+            const nameInput = document.getElementById('name');
+            if (nameInput.value.trim() === '') {
+                document.getElementById('nameError').textContent = 'Por favor, ingresa tu nombre.';
+                valid = false;
+            }
+            
+            // Validar campo Email
+            const emailInput = document.getElementById('email');
+            if (emailInput.value.trim() === '') {
+                document.getElementById('emailError').textContent = 'Por favor, ingresa tu email.';
+                valid = false;
+            } else {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(emailInput.value.trim())) {
+                    document.getElementById('emailError').textContent = 'Por favor, ingresa un email válido.';
+                    valid = false;
+                }
+            }
+            
+            // Validar campo Mensaje
+            const messageInput = document.getElementById('message');
+            if (messageInput.value.trim() === '') {
+                document.getElementById('messageError').textContent = 'Por favor, ingresa un mensaje.';
+                valid = false;
+            }
+            
+            if (valid) {
+                const sentMessage = document.getElementById('sentMessage');
+                sentMessage.textContent = 'Mensaje enviado.';
+                sentMessage.style.display = 'block';
+                
+                // Reiniciar el formulario
+                contactForm.reset();
+                
+                // Ocultar el mensaje de "enviado" después de 3 segundos
+                setTimeout(() => {
+                    sentMessage.style.display = 'none';
+                }, 3000);
+            }
+        });
+    }
+});
+
