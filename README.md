@@ -24,4 +24,4 @@ Este proyecto es un currículum vitae web responsivo y moderno, desarrollado sin
 1. **Clonar el Repositorio:**
 
    ```bash
-   git clone https://github.com/danyelcm2/danyelcm2.github.io
+  https://danyelcm2.github.io
