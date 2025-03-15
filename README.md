@@ -1,4 +1,4 @@
-# Currículum Vitae - Wincer Daniel Cordova Marroquín
+# Currículum Vitae 
 
 Este proyecto es un currículum vitae web responsivo y moderno, desarrollado sin utilizar frameworks externos como Bootstrap, jQuery o Materialize. La página incorpora efectos interactivos, validación de formularios y animaciones para una experiencia de usuario fluida tanto en computadoras como en dispositivos móviles.
 
@@ -22,6 +22,8 @@ Este proyecto es un currículum vitae web responsivo y moderno, desarrollado sin
 ## Cómo Ejecutar la Página
 
 1. **Clonar el Repositorio:**
-
+    -link directo a la pagina
+        https://danyelcm2.github.io
    ```bash
-  https://danyelcm2.github.io
+    git clone https://github.com/danyelcm2/danyelcm2.github.io 
+ 
